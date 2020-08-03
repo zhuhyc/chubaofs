@@ -1000,7 +1000,7 @@ func (c *Cluster) validateDecommissionDataPartition(dp *DataPartition, offlineAd
 		return
 	}
 
-	if err = dp.hasMissingOneReplica(int(vol.dpReplicaNum)); err != nil {
+	if err = dp.hasMissingOneReplica(offlineAddr, int(vol.dpReplicaNum)); err != nil {
 		return
 	}
 
